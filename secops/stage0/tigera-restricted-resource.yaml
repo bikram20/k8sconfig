@@ -1,0 +1,12 @@
+kind: GlobalNetworkSet
+apiVersion: projectcalico.org/v3
+metadata:
+  name: 2-tigera-restricted-resource
+  labels: 
+    color: red
+spec:
+  nets:
+    - 23.185.0.2/32
+  allowedEgressDomains:
+  - tigera.io
+  - www.tigera.io

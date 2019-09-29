@@ -1,0 +1,11 @@
+kind: GlobalNetworkSet
+apiVersion: projectcalico.org/v3
+metadata:
+  name: 1-aws-restricted-resource
+  labels: 
+    color: red
+spec:
+  nets:
+  - 18.232.196.29
+  allowedEgressDomains:
+  - bgdbxydemo.cmapoe0bxbtn.us-east-1.rds.amazonaws.com

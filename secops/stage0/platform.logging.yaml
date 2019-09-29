@@ -1,0 +1,19 @@
+  apiVersion: projectcalico.org/v3
+  kind: GlobalNetworkPolicy
+  metadata:
+    labels:
+      projectcalico.org/tier: platform
+    name: platform.logging
+  spec:
+    ingress:
+    - action: Allow
+      destination:
+        ports:
+        - 8080
+      protocol: TCP
+      source: {}
+    order: 9007199254741392
+    selector: app == "logging"
+    tier: platform
+    types:
+    - Ingress
