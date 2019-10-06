@@ -12,8 +12,5 @@ spec:
     - from:
       - podSelector:
           matchLabels:
-            run: access2
-      - podSelector:
-          matchLabels:
             run: access3
 ---
