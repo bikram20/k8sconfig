@@ -7,10 +7,13 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      run: nginx
+      run: nginx2
   ingress:
     - from:
       - podSelector:
           matchLabels:
-            run: access
+            run: access2
+      - podSelector:
+          matchLabels:
+            run: access3
 ---
