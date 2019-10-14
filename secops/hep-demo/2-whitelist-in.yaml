@@ -1,17 +1,14 @@
 
-
 ---
 apiVersion: projectcalico.org/v3
 kind: GlobalNetworkPolicy
 metadata:
-  name: whitelist-intra-cluster-out
+  name: whitelist-intra-cluster-in
 spec:
   selector: tigera.io/type == "master"
-  applyOnForward: true
   order: 20
   types:
-  - Egress
-  egress:
+  - Ingress
+  ingress:
   - action: Allow
-
 
