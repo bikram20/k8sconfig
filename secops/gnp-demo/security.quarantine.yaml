@@ -3,7 +3,7 @@ kind: GlobalNetworkPolicy
 metadata:
   name: security.quarantine
   annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
+    argocd.argoproj.io/compare-options: "IgnoreExtraneous"
 spec:
   tier: security
   order: 100
