@@ -5,6 +5,8 @@ apiVersion: projectcalico.org/v3
 kind: GlobalNetworkPolicy
 metadata:
   name: whitelist-intra-cluster-out
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
 spec:
   selector: tigera.io/type == "master"
   order: 20
