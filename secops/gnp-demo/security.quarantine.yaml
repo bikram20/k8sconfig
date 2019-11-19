@@ -12,7 +12,7 @@ spec:
   - action: Log
     source: {}
     destination: {}
-  - action: Deny
+  - action: Allow
     source: {}
     destination: {}
   egress:
